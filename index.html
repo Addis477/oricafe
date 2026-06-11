@@ -20,20 +20,12 @@
             --purple-light: #F3E8F5;
             --yellow: #FBBF24;
             --yellow-dark: #F59E0B;
-            --yellow-light: #FEF3C7;
             --dark: #1A1A1A;
-            --dark-light: #2D2D2D;
-            --white: #FFFFFF;
-            --cream: #FFFBF5;
             --gray: #6B7280;
-            --gray-light: #F3F4F6;
             --green: #22C55E;
-            --radius-sm: 8px;
             --radius: 16px;
             --radius-lg: 24px;
-            --shadow: 0 4px 20px rgba(0,0,0,0.08);
             --shadow-lg: 0 12px 40px rgba(0,0,0,0.1);
-            --shadow-xl: 0 20px 60px rgba(0,0,0,0.15);
             --transition: 0.3s ease;
         }
 
@@ -55,9 +47,6 @@
             padding: 10px;
             font-size: 0.85rem;
             font-weight: 600;
-            letter-spacing: 0.5px;
-            position: relative;
-            z-index: 10;
         }
         .topbar i { color: var(--yellow); margin: 0 6px; }
         .topbar span { color: var(--yellow); }
@@ -109,7 +98,6 @@
             font-size: 1.7rem;
             font-weight: 900;
             color: var(--dark);
-            letter-spacing: -0.5px;
         }
         .logo__text span { color: var(--purple); }
         .logo__sub {
@@ -128,20 +116,18 @@
             padding: 12px 26px;
             border-radius: 50px;
             font-weight: 700;
-            font-size: 0.95rem;
             text-decoration: none;
             transition: var(--transition);
-            box-shadow: 0 4px 20px rgba(123,45,142,0.3);
         }
         .btn-order:hover { background: var(--purple-dark); transform: scale(1.05); }
 
         /* ============ HERO - NO WHITE OVERLAY ============ */
         .hero {
-            background: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1400&q=80') center/cover no-repeat;
+            background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 100%),
+                url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1400&q=80') center/cover no-repeat;
             text-align: center;
             padding: 120px 24px 100px;
             position: relative;
-            overflow: hidden;
         }
         .hero::before {
             content: '';
@@ -162,9 +148,7 @@
             border-radius: 50px;
             font-weight: 700;
             font-size: 0.9rem;
-            letter-spacing: 1px;
             margin-bottom: 18px;
-            box-shadow: 0 4px 20px rgba(123,45,142,0.3);
         }
         .hero__title {
             font-family: 'Playfair Display', serif;
@@ -173,11 +157,11 @@
             color: white;
             line-height: 1.1;
             margin-bottom: 8px;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
         .hero__title span { color: var(--yellow); }
         .hero__sub {
-            color: rgba(255,255,255,0.95);
+            color: rgba(255,255,255,0.9);
             font-size: 1.2rem;
             margin-bottom: 24px;
             text-shadow: 0 1px 5px rgba(0,0,0,0.3);
@@ -186,31 +170,25 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: var(--purple);
-            color: white;
+            background: var(--yellow);
+            color: var(--dark);
             padding: 16px 36px;
             border-radius: 50px;
             font-weight: 700;
             font-size: 1.1rem;
             text-decoration: none;
             transition: var(--transition);
-            box-shadow: 0 8px 30px rgba(123,45,142,0.4);
         }
-        .hero__cta:hover { background: var(--purple-dark); transform: scale(1.05); }
+        .hero__cta:hover { background: var(--yellow-dark); transform: scale(1.05); }
 
         /* ============ CONTAINER ============ */
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
         /* ============ SECTION ============ */
         .section { padding: 70px 0; }
-        .section--dark { background: #FFFFFF; }
         .section--light { background: #FAFAFA; }
         .section__header { text-align: center; margin-bottom: 50px; }
-        .section__icon {
-            display: inline-block;
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
+        .section__icon { display: inline-block; font-size: 3rem; margin-bottom: 10px; }
         .section__title {
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
@@ -231,8 +209,8 @@
         /* ============ MENU GRID ============ */
         .menu-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 14px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 12px;
         }
         .menu-item {
             background: #FFFFFF;
@@ -244,7 +222,6 @@
             transition: var(--transition);
             border: 1px solid #E5E5E5;
             cursor: pointer;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
         }
         .menu-item:hover {
             border-color: var(--purple);
@@ -271,13 +248,13 @@
         .menu-item__price {
             font-weight: 700;
             color: var(--purple);
-            font-size: 1.05rem;
+            font-size: 1rem;
             white-space: nowrap;
         }
 
         /* ============ CATEGORY BANNER ============ */
         .category-banner {
-            height: 200px;
+            height: 180px;
             border-radius: var(--radius-lg);
             background-size: cover;
             background-position: center;
@@ -286,13 +263,13 @@
             justify-content: center;
             margin-bottom: 30px;
             position: relative;
-            overflow: hidden;
         }
         .category-banner::before {
             content: '';
             position: absolute;
             inset: 0;
             background: rgba(0,0,0,0.3);
+            border-radius: var(--radius-lg);
         }
         .category-banner__title {
             position: relative;
@@ -304,7 +281,7 @@
             text-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
 
-        /* ============ MODAL (POPUP) ============ */
+        /* ============ MODAL ============ */
         .modal {
             display: none;
             position: fixed;
@@ -318,9 +295,7 @@
             align-items: center;
             backdrop-filter: blur(5px);
         }
-        .modal.active {
-            display: flex;
-        }
+        .modal.active { display: flex; }
         .modal__content {
             background: #FFFFFF;
             max-width: 500px;
@@ -331,24 +306,15 @@
             border: 1px solid var(--purple);
         }
         @keyframes modalFadeIn {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
         }
         .modal__image {
             width: 100%;
             height: 260px;
             object-fit: cover;
         }
-        .modal__body {
-            padding: 28px;
-            text-align: center;
-        }
+        .modal__body { padding: 28px; text-align: center; }
         .modal__title {
             font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
@@ -365,23 +331,15 @@
         .modal__ingredients h4 {
             color: var(--purple-dark);
             margin-bottom: 12px;
-            font-size: 1rem;
         }
-        .modal__ingredients ul {
-            list-style: none;
-            padding-left: 0;
-        }
+        .modal__ingredients ul { list-style: none; }
         .modal__ingredients li {
-            color: var(--dark);
             padding: 6px 0;
             display: flex;
             align-items: center;
             gap: 10px;
         }
-        .modal__ingredients li i {
-            color: var(--purple);
-            font-size: 0.8rem;
-        }
+        .modal__ingredients li i { color: var(--purple); }
         .modal__price {
             font-size: 1.6rem;
             font-weight: 800;
@@ -395,16 +353,10 @@
             padding: 12px 28px;
             border-radius: 50px;
             font-weight: 700;
-            font-size: 1rem;
             cursor: pointer;
-            transition: var(--transition);
-            margin-top: 8px;
             width: 100%;
         }
-        .close-modal:hover {
-            background: var(--purple-dark);
-            transform: scale(1.02);
-        }
+        .close-modal:hover { background: var(--purple-dark); }
 
         /* ============ CONTACT ============ */
         .contact-bar {
@@ -429,7 +381,6 @@
         .contact-bar__social a {
             color: white;
             font-size: 1.5rem;
-            transition: var(--transition);
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -438,6 +389,7 @@
             align-items: center;
             justify-content: center;
             text-decoration: none;
+            transition: var(--transition);
         }
         .contact-bar__social a:hover { background: var(--yellow); color: var(--dark); }
 
@@ -449,48 +401,28 @@
             padding: 30px 20px;
             font-size: 0.85rem;
         }
-        .footer__credit {
-            margin-top: 8px;
-            font-size: 0.75rem;
-            color: #666;
-        }
-        .footer__credit a {
-            color: var(--yellow);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-        .footer__credit a:hover {
-            color: var(--purple-light);
-        }
-        .footer__credit i {
-            margin: 0 4px;
-            font-size: 0.7rem;
-        }
+        .footer__credit { margin-top: 8px; font-size: 0.75rem; }
+        .footer__credit a { color: var(--yellow); text-decoration: none; }
 
-        /* ============ RESPONSIVE ============ */
         @media (max-width: 768px) {
             .hero__title { font-size: 2.5rem; }
-            .section__title { font-size: 1.8rem; }
-            .menu-grid { grid-template-columns: 1fr 1fr; }
-            .header__inner { flex-direction: column; text-align: center; }
-            .category-banner { height: 150px; }
-            .category-banner__title { font-size: 1.5rem; }
             .hero { padding: 80px 24px 60px; }
-        }
-        @media (max-width: 480px) {
+            .section__title { font-size: 1.8rem; }
             .menu-grid { grid-template-columns: 1fr; }
-            .hero__title { font-size: 1.8rem; }
+            .header__inner { flex-direction: column; text-align: center; }
+            .category-banner { height: 130px; }
+            .category-banner__title { font-size: 1.3rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- ============ TOP BAR ============ -->
+    <!-- TOP BAR -->
     <div class="topbar">
         <i class="fas fa-motorcycle"></i> Delivery: <span>beu delivery</span> & <span>Zmall App Store</span> 🛵 | <i class="fas fa-clock"></i> Open Daily: 7AM - 10PM
     </div>
 
-    <!-- ============ HEADER ============ -->
+    <!-- HEADER -->
     <header class="header">
         <div class="header__inner">
             <div class="logo">
@@ -506,7 +438,7 @@
         </div>
     </header>
 
-    <!-- ============ HERO - NO OVERLAY ============ -->
+    <!-- HERO - NO WHITE OVERLAY -->
     <section class="hero">
         <div class="hero__content">
             <div class="hero__badge">☕ PREMIUM CAFE</div>
@@ -518,93 +450,103 @@
         </div>
     </section>
 
-    <!-- ============ SANDWICH / BREAKFAST ============ -->
-    <section class="section section--dark">
+    <!-- ============ SANDWICH / BREAKFAST FOODS ============ -->
+    <section class="section">
         <div class="container">
-            <div class="category-banner" style="background-image: url('https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=1200&q=80');">
-                <h3 class="category-banner__title">🍳 Breakfast & Sandwiches</h3>
+            <div class="section__header">
+                <div class="section__icon">🍳</div>
+                <h2 class="section__title">Sandwich & <span>Breakfast</span></h2>
+                <div class="section__line"></div>
             </div>
             <div class="menu-grid">
-                <div class="menu-item" data-name="Fetira Normal with Honey" data-price="380" data-image="https://images.unsplash.com/photo-1586444248902-2f5b5a5c2f4b?w=600&q=80" data-ingredients="Fetira Bread, Honey, Butter"><span class="menu-item__name">Fetira Normal with Honey <span class="veg-badge">V</span></span><span class="menu-item__price">380</span></div>
+                <div class="menu-item" data-name="Fetira Normal with Honey" data-price="380" data-image="https://images.unsplash.com/photo-1586444248902-2f5b5a5c2f4b?w=600&q=80" data-ingredients="Fetira Bread, Honey, Butter"><span class="menu-item__name">Fetira Normal with Honey</span><span class="menu-item__price">380</span></div>
                 <div class="menu-item" data-name="ORI Special Fetira with Egg and Cheese" data-price="430" data-image="https://images.unsplash.com/photo-1586444248902-2f5b5a5c2f4b?w=600&q=80" data-ingredients="Fetira Bread, Egg, Cheese, Honey, Butter"><span class="menu-item__name">ORI Special Fetira with Egg and Cheese</span><span class="menu-item__price">430</span></div>
-                <div class="menu-item" data-name="Wafel Normal with Honey" data-price="400" data-image="https://images.unsplash.com/photo-1504662266198-3a8c8fb2d4d4?w=600&q=80" data-ingredients="Waffle, Honey, Butter"><span class="menu-item__name">Wafel Normal with Honey <span class="veg-badge">V</span></span><span class="menu-item__price">400</span></div>
+                <div class="menu-item" data-name="Wafel Normal with Honey" data-price="400" data-image="https://images.unsplash.com/photo-1504662266198-3a8c8fb2d4d4?w=600&q=80" data-ingredients="Waffle, Honey, Butter"><span class="menu-item__name">Wafel Normal with Honey</span><span class="menu-item__price">400</span></div>
                 <div class="menu-item" data-name="Full Special" data-price="420" data-image="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=600&q=80" data-ingredients="Eggs, Sausage, Beans, Toast, Tomato"><span class="menu-item__name">Full Special</span><span class="menu-item__price">420</span></div>
                 <div class="menu-item" data-name="Full Normal" data-price="380" data-image="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=600&q=80" data-ingredients="Eggs, Beans, Toast, Tomato"><span class="menu-item__name">Full Normal</span><span class="menu-item__price">380</span></div>
-                <div class="menu-item" data-name="French Toast" data-price="400" data-image="https://images.unsplash.com/photo-1504662266198-3a8c8fb2d4d4?w=600&q=80" data-ingredients="Bread, Egg, Milk, Cinnamon, Honey"><span class="menu-item__name">French Toast <span class="veg-badge">V</span></span><span class="menu-item__price">400</span></div>
-                <div class="menu-item" data-name="Chechebesa with Honey" data-price="350" data-image="https://images.unsplash.com/photo-1627662056004-86d2d2b7bfa9?w=600&q=80" data-ingredients="Shredded Bread, Honey, Butter"><span class="menu-item__name">Chechebesa with Honey <span class="veg-badge">V</span></span><span class="menu-item__price">350</span></div>
-                <div class="menu-item" data-name="Chechebesa with Butter" data-price="350" data-image="https://images.unsplash.com/photo-1627662056004-86d2d2b7bfa9?w=600&q=80" data-ingredients="Shredded Bread, Ethiopian Butter"><span class="menu-item__name">Chechebesa with Butter <span class="veg-badge">V</span></span><span class="menu-item__price">350</span></div>
+                <div class="menu-item" data-name="French Toast" data-price="400" data-image="https://images.unsplash.com/photo-1504662266198-3a8c8fb2d4d4?w=600&q=80" data-ingredients="Bread, Egg, Milk, Cinnamon, Honey"><span class="menu-item__name">French Toast</span><span class="menu-item__price">400</span></div>
+                <div class="menu-item" data-name="Chechebesa with Honey" data-price="350" data-image="https://images.unsplash.com/photo-1627662056004-86d2d2b7bfa9?w=600&q=80" data-ingredients="Shredded Bread, Honey, Butter"><span class="menu-item__name">Chechebesa with Honey</span><span class="menu-item__price">350</span></div>
+                <div class="menu-item" data-name="Chechebesa with Butter" data-price="350" data-image="https://images.unsplash.com/photo-1627662056004-86d2d2b7bfa9?w=600&q=80" data-ingredients="Shredded Bread, Ethiopian Butter"><span class="menu-item__name">Chechebesa with Butter</span><span class="menu-item__price">350</span></div>
                 <div class="menu-item" data-name="ORI Special Chechebesa" data-price="450" data-image="https://images.unsplash.com/photo-1627662056004-86d2d2b7bfa9?w=600&q=80" data-ingredients="Shredded Bread, Egg, Cheese, Butter, Spices"><span class="menu-item__name">ORI Special Chechebesa</span><span class="menu-item__price">450</span></div>
                 <div class="menu-item" data-name="Scrambled Eggs" data-price="350" data-image="https://images.unsplash.com/photo-1510693206979-df09806cb5f5?w=600&q=80" data-ingredients="3 Eggs, Butter, Salt, Pepper, Chives"><span class="menu-item__name">Scrambled Eggs</span><span class="menu-item__price">350</span></div>
                 <div class="menu-item" data-name="Egg with Meat" data-price="400" data-image="https://images.unsplash.com/photo-1510693206979-df09806cb5f5?w=600&q=80" data-ingredients="Eggs, Meat Strips, Onion, Tomato"><span class="menu-item__name">Egg with Meat</span><span class="menu-item__price">400</span></div>
-                <div class="menu-item" data-name="Boiled Eggs" data-price="350" data-image="https://images.unsplash.com/photo-1510693206979-df09806cb5f5?w=600&q=80" data-ingredients="2 Fresh Boiled Eggs, Salt"><span class="menu-item__name">Boiled Eggs <span class="veg-badge">V</span></span><span class="menu-item__price">350</span></div>
+                <div class="menu-item" data-name="Boiled Eggs" data-price="350" data-image="https://images.unsplash.com/photo-1510693206979-df09806cb5f5?w=600&q=80" data-ingredients="2 Fresh Boiled Eggs, Salt"><span class="menu-item__name">Boiled Eggs</span><span class="menu-item__price">350</span></div>
                 <div class="menu-item" data-name="Egg Omelette" data-price="350" data-image="https://images.unsplash.com/photo-1510693206979-df09806cb5f5?w=600&q=80" data-ingredients="3 Eggs, Onion, Tomato, Green Chili"><span class="menu-item__name">Egg Omelette</span><span class="menu-item__price">350</span></div>
-                <div class="menu-item" data-name="Pan Cake" data-price="400" data-image="https://images.unsplash.com/photo-1504662266198-3a8c8fb2d4d4?w=600&q=80" data-ingredients="Fluffy Pancake, Honey, Butter"><span class="menu-item__name">Pan Cake <span class="veg-badge">V</span></span><span class="menu-item__price">400</span></div>
-                <div class="menu-item" data-name="Porage (Porridge)" data-price="400" data-image="https://images.unsplash.com/photo-1517677208171-0bc6585a2e4e?w=600&q=80" data-ingredients="Oats, Milk, Honey, Cinnamon"><span class="menu-item__name">Porage (Porridge) <span class="veg-badge">V</span></span><span class="menu-item__price">400</span></div>
-                <div class="menu-item" data-name="Shukshuka" data-price="450" data-image="https://images.unsplash.com/photo-1510693206979-df09806cb5f5?w=600&q=80" data-ingredients="Eggs, Tomato, Onion, Bell Pepper, Spices"><span class="menu-item__name">Shukshuka <span class="veg-badge">V</span></span><span class="menu-item__price">450</span></div>
+                <div class="menu-item" data-name="Pan Cake" data-price="400" data-image="https://images.unsplash.com/photo-1504662266198-3a8c8fb2d4d4?w=600&q=80" data-ingredients="Fluffy Pancake, Honey, Butter"><span class="menu-item__name">Pan Cake</span><span class="menu-item__price">400</span></div>
+                <div class="menu-item" data-name="Porage (Porridge)" data-price="400" data-image="https://images.unsplash.com/photo-1517677208171-0bc6585a2e4e?w=600&q=80" data-ingredients="Oats, Milk, Honey, Cinnamon"><span class="menu-item__name">Porage (Porridge)</span><span class="menu-item__price">400</span></div>
+                <div class="menu-item" data-name="Shukshuka" data-price="450" data-image="https://images.unsplash.com/photo-1510693206979-df09806cb5f5?w=600&q=80" data-ingredients="Eggs, Tomato, Onion, Bell Pepper, Spices"><span class="menu-item__name">Shukshuka</span><span class="menu-item__price">450</span></div>
             </div>
         </div>
     </section>
 
-    <!-- ============ BURGERS ============ -->
+    <!-- ============ BURGER ============ -->
     <section class="section section--light">
         <div class="container">
-            <div class="category-banner" style="background-image: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1200&q=80');">
-                <h3 class="category-banner__title">🍔 Burgers</h3>
+            <div class="section__header">
+                <div class="section__icon">🍔</div>
+                <h2 class="section__title"><span>Burger</span></h2>
+                <div class="section__line"></div>
             </div>
             <div class="menu-grid">
-                <div class="menu-item" data-name="Normal Burger" data-price="550" data-image="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80" data-ingredients="Beef Patty, Bread, Lettuce, Tomato, Onion, Sauce"><span class="menu-item__name">Normal Burger</span><span class="menu-item__price">550</span></div>
-                <div class="menu-item" data-name="Cheese Burger" data-price="650" data-image="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80" data-ingredients="Beef Patty, Cheese, Bread, Lettuce, Tomato, Onion, Sauce"><span class="menu-item__name">Cheese Burger</span><span class="menu-item__price">650</span></div>
-                <div class="menu-item" data-name="ORI Special Burger" data-price="700" data-image="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80" data-ingredients="Beef Patty, Bread, Mushroom, Caramelized Onion, Special Sauce"><span class="menu-item__name">ORI Special Burger</span><span class="menu-item__price">700</span></div>
+                <div class="menu-item" data-name="Normal Burger" data-price="550" data-image="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80" data-ingredients="Beef Patty + Bread + Vegetable + Sauce"><span class="menu-item__name">Normal Burger</span><span class="menu-item__price">550</span></div>
+                <div class="menu-item" data-name="Cheese Burger" data-price="650" data-image="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80" data-ingredients="Beef + Cheese + Bread + Vegetable + Sauce"><span class="menu-item__name">Cheese Burger</span><span class="menu-item__price">650</span></div>
+                <div class="menu-item" data-name="ORI Special Burger" data-price="700" data-image="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80" data-ingredients="Beef + Bread + Mushroom + Caramelized + Sauce"><span class="menu-item__name">ORI Special Burger</span><span class="menu-item__price">700</span></div>
             </div>
         </div>
     </section>
 
-    <!-- ============ WRAPS ============ -->
-    <section class="section section--dark">
+    <!-- ============ WRAP ============ -->
+    <section class="section">
         <div class="container">
-            <div class="category-banner" style="background-image: url('https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=1200&q=80');">
-                <h3 class="category-banner__title">🌯 Wraps</h3>
+            <div class="section__header">
+                <div class="section__icon">🌯</div>
+                <h2 class="section__title"><span>Wrap</span></h2>
+                <div class="section__line"></div>
             </div>
             <div class="menu-grid">
-                <div class="menu-item" data-name="Avocado Wrap" data-price="420" data-image="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=600&q=80" data-ingredients="Avocado, Wheat Pita, Lettuce, Tomato, Sauce"><span class="menu-item__name">Avocado Wrap <span class="veg-badge">V</span></span><span class="menu-item__price">420</span></div>
-                <div class="menu-item" data-name="Vegetable Wrap" data-price="400" data-image="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=600&q=80" data-ingredients="Grilled Vegetables, Wheat Pita, Hummus, Lettuce"><span class="menu-item__name">Vegetable Wrap <span class="veg-badge">V</span></span><span class="menu-item__price">400</span></div>
-                <div class="menu-item" data-name="Tuna Wrap" data-price="550" data-image="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=600&q=80" data-ingredients="Tuna, Wheat Pita, Cheese, Lettuce, Tomato, Sauce"><span class="menu-item__name">Tuna Wrap</span><span class="menu-item__price">550</span></div>
-                <div class="menu-item" data-name="Chicken Wrap" data-price="590" data-image="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=600&q=80" data-ingredients="Grilled Chicken, Wheat Pita, Lettuce, Tomato, Sauce"><span class="menu-item__name">Chicken Wrap</span><span class="menu-item__price">590</span></div>
-                <div class="menu-item" data-name="Beef Wrap" data-price="590" data-image="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=600&q=80" data-ingredients="Beef, Wheat Pita, Cheese, Lettuce, Tomato, Sauce"><span class="menu-item__name">Beef Wrap</span><span class="menu-item__price">590</span></div>
+                <div class="menu-item" data-name="Avocado Wrap" data-price="--" data-image="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=600&q=80" data-ingredients="Avocado + Wheat Pita + Vegetables"><span class="menu-item__name">Avocado Wrap</span><span class="menu-item__price">--</span></div>
+                <div class="menu-item" data-name="Vegetable Wrap" data-price="--" data-image="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=600&q=80" data-ingredients="Vegetable + Wheat Pita + Sauce"><span class="menu-item__name">Vegetable Wrap</span><span class="menu-item__price">--</span></div>
+                <div class="menu-item" data-name="Tuna Wrap" data-price="--" data-image="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=600&q=80" data-ingredients="Tuna + Wheat Pita + Cheese + Sauce"><span class="menu-item__name">Tuna Wrap</span><span class="menu-item__price">--</span></div>
+                <div class="menu-item" data-name="Chicken Wrap" data-price="--" data-image="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=600&q=80" data-ingredients="Chicken + Wheat Pita + Sauce"><span class="menu-item__name">Chicken Wrap</span><span class="menu-item__price">--</span></div>
+                <div class="menu-item" data-name="Beef Wrap" data-price="--" data-image="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=600&q=80" data-ingredients="Beef + Wheat Pita + Cheese + Sauce"><span class="menu-item__name">Beef Wrap</span><span class="menu-item__price">--</span></div>
             </div>
         </div>
     </section>
 
-    <!-- ============ CAKES & COOKIES ============ -->
+    <!-- ============ CAKE ============ -->
     <section class="section section--light">
         <div class="container">
-            <div class="category-banner" style="background-image: url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1200&q=80');">
-                <h3 class="category-banner__title">🍰 Cakes & Cookies</h3>
+            <div class="section__header">
+                <div class="section__icon">🍰</div>
+                <h2 class="section__title"><span>Cake</span></h2>
+                <div class="section__line"></div>
             </div>
             <div class="menu-grid">
-                <div class="menu-item" data-name="Cakes" data-price="180" data-image="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=80" data-ingredients="Freshly Baked Cake, Variety of Flavors"><span class="menu-item__name">Cakes <span class="veg-badge">V</span></span><span class="menu-item__price">180</span></div>
-                <div class="menu-item" data-name="Cookies (1/2 kg)" data-price="800" data-image="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=600&q=80" data-ingredients="Homemade Cookies, Butter, Chocolate Chips"><span class="menu-item__name">Cookies (1/2 kg) <span class="veg-badge">V</span></span><span class="menu-item__price">800</span></div>
+                <div class="menu-item" data-name="Cakes" data-price="180" data-image="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=80" data-ingredients="Freshly Baked Cake"><span class="menu-item__name">Cakes</span><span class="menu-item__price">180</span></div>
+                <div class="menu-item" data-name="Cookies (1/2 kg)" data-price="800" data-image="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=600&q=80" data-ingredients="Homemade Cookies"><span class="menu-item__name">Cookies (1/2 kg)</span><span class="menu-item__price">800</span></div>
             </div>
         </div>
     </section>
 
-    <!-- ============ JUICES ============ -->
-    <section class="section section--dark">
+    <!-- ============ EXTRA ============ -->
+    <section class="section">
         <div class="container">
-            <div class="category-banner" style="background-image: url('https://images.unsplash.com/photo-1613478223719-2ab802602423?w=1200&q=80');">
-                <h3 class="category-banner__title">🧃 Fresh Juices</h3>
+            <div class="section__header">
+                <div class="section__icon">🍽️</div>
+                <h2 class="section__title"><span>Extra</span></h2>
+                <div class="section__line"></div>
             </div>
             <div class="menu-grid">
-                <div class="menu-item" data-name="Avocado Juice" data-price="250" data-image="https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=600&q=80" data-ingredients="Fresh Avocado, Milk, Honey"><span class="menu-item__name">Avocado Juice <span class="veg-badge">V</span></span><span class="menu-item__price">250</span></div>
-                <div class="menu-item" data-name="Mango Juice" data-price="250" data-image="https://images.unsplash.com/photo-1623065422902-30a2d299e4cd?w=600&q=80" data-ingredients="Fresh Mango, Honey, Lime"><span class="menu-item__name">Mango Juice <span class="veg-badge">V</span></span><span class="menu-item__price">250</span></div>
-                <div class="menu-item" data-name="Papaya Juice" data-price="250" data-image="https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=600&q=80" data-ingredients="Fresh Papaya, Lime, Honey"><span class="menu-item__name">Papaya Juice <span class="veg-badge">V</span></span><span class="menu-item__price">250</span></div>
-                <div class="menu-item" data-name="Pineapple Juice" data-price="250" data-image="https://images.unsplash.com/photo-1623065422902-30a2d299e4cd?w=600&q=80" data-ingredients="Fresh Pineapple, Mint"><span class="menu-item__name">Pineapple Juice <span class="veg-badge">V</span></span><span class="menu-item__price">250</span></div>
-                <div class="menu-item" data-name="Mixed Juice" data-price="300" data-image="https://images.unsplash.com/photo-1623065422902-30a2d299e4cd?w=600&q=80" data-ingredients="Mixed Tropical Fruits, Honey"><span class="menu-item__name">Mixed Juice <span class="veg-badge">V</span></span><span class="menu-item__price">300</span></div>
-                <div class="menu-item" data-name="ORI Special Juice" data-price="450" data-image="https://images.unsplash.com/photo-1623065422902-30a2d299e4cd?w=600&q=80" data-ingredients="Signature Fruit Blend, Honey, Lime"><span class="menu-item__name">ORI Special Juice <span class="veg-badge">V</span></span><span class="menu-item__price">450</span></div>
-                <div class="menu-item" data-name="Smoothie with Chocolate" data-price="350" data-image="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=600&q=80" data-ingredients="Chocolate, Banana, Milk, Ice"><span class="menu-item__name">Smoothie with Chocolate <span class="veg-badge">V</span></span><span class="menu-item__price">350</span></div>
-                <div class="menu-item" data-name="Milk Shake" data-price="300" data-image="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=600&q=80" data-ingredients="Milk, Ice Cream, Flavor Syrup"><span class="menu-item__name">Milk Shake <span class="veg-badge">V</span></span><span class="menu-item__price">300</span></div>
-                <div class="menu-item" data-name="Melon Juice" data-price="250" data-image="https://images.unsplash.com/photo-1623065422902-30a2d299e4cd?w=600&q=80" data-ingredients="Fresh Melon, Honey, Lime"><span class="menu-item__name">Melon Juice <span class="veg-badge">V</span></span><span class="menu-item__price">250</span></div>
-                <div class="menu-item" data-name="Orange Mix Juice" data-price="250" data-image="https://images.unsplash.com/photo-1623065422902-30a2d299e4cd?w=600&q=80" data-ingredients="Fresh Orange, Carrot, Ginger"><span class="menu-item__name">Orange Mix Juice <span class="veg-badge">V</span></span><span class="menu-item__price">250</span></div>
+                <div class="menu-item" data-name="Milk" data-price="50" data-image="https://images.unsplash.com/photo-1488477181946-6428a0293df2?w=600&q=80" data-ingredients="Fresh Milk"><span class="menu-item__name">Milk</span><span class="menu-item__price">50</span></div>
+                <div class="menu-item" data-name="Temir" data-price="20" data-image="#" data-ingredients="Temir"><span class="menu-item__name">Temir</span><span class="menu-item__price">20</span></div>
+                <div class="menu-item" data-name="Yogurt" data-price="50" data-image="https://images.unsplash.com/photo-1488477181946-6428a0293df2?w=600&q=80" data-ingredients="Plain Yogurt"><span class="menu-item__name">Yogurt</span><span class="menu-item__price">50</span></div>
+                <div class="menu-item" data-name="Egg" data-price="80" data-image="https://images.unsplash.com/photo-1510693206979-df09806cb5f5?w=600&q=80" data-ingredients="Fresh Egg"><span class="menu-item__name">Egg</span><span class="menu-item__price">80</span></div>
+                <div class="menu-item" data-name="Bread" data-price="40" data-image="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80" data-ingredients="Fresh Bread"><span class="menu-item__name">Bread</span><span class="menu-item__price">40</span></div>
+                <div class="menu-item" data-name="Takeaway Box" data-price="40" data-image="https://images.unsplash.com/photo-1574691250078-96e29b1f4f8e?w=600&q=80" data-ingredients="Takeaway Container"><span class="menu-item__name">Takeaway Box</span><span class="menu-item__price">40</span></div>
+                <div class="menu-item" data-name="Takeaway Juice Cup" data-price="20" data-image="#" data-ingredients="Juice Cup"><span class="menu-item__name">Takeaway Juice Cup</span><span class="menu-item__price">20</span></div>
+                <div class="menu-item" data-name="Takeaway Coffee Cup" data-price="30" data-image="#" data-ingredients="Coffee Cup"><span class="menu-item__name">Takeaway Coffee Cup</span><span class="menu-item__price">30</span></div>
+                <div class="menu-item" data-name="Mayonnaise" data-price="30" data-image="#" data-ingredients="Mayonnaise"><span class="menu-item__name">Mayonnaise</span><span class="menu-item__price">30</span></div>
+                <div class="menu-item" data-name="Extra Honey" data-price="30" data-image="https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=600&q=80" data-ingredients="Pure Honey"><span class="menu-item__name">Extra Honey</span><span class="menu-item__price">30</span></div>
             </div>
         </div>
     </section>
@@ -612,72 +554,79 @@
     <!-- ============ TEA & COFFEE ============ -->
     <section class="section section--light">
         <div class="container">
-            <div class="category-banner" style="background-image: url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=1200&q=80');">
-                <h3 class="category-banner__title">☕ Tea & Coffee</h3>
+            <div class="section__header">
+                <div class="section__icon">☕</div>
+                <h2 class="section__title">Tea & <span>Coffee</span></h2>
+                <div class="section__line"></div>
             </div>
             <div class="menu-grid">
-                <div class="menu-item" data-name="Lemon Tea" data-price="100" data-image="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?w=600&q=80" data-ingredients="Black Tea, Fresh Lemon, Honey"><span class="menu-item__name">Lemon Tea</span><span class="menu-item__price">100</span></div>
-                <div class="menu-item" data-name="Ginger Tea" data-price="100" data-image="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?w=600&q=80" data-ingredients="Black Tea, Fresh Ginger, Honey"><span class="menu-item__name">Ginger Tea</span><span class="menu-item__price">100</span></div>
-                <div class="menu-item" data-name="Flavor Tea" data-price="100" data-image="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?w=600&q=80" data-ingredients="Flavored Tea, Honey"><span class="menu-item__name">Flavor Tea</span><span class="menu-item__price">100</span></div>
-                <div class="menu-item" data-name="ORI Special Tea" data-price="200" data-image="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?w=600&q=80" data-ingredients="Premium Tea Blend, Spices, Honey"><span class="menu-item__name">ORI Special Tea</span><span class="menu-item__price">200</span></div>
-                <div class="menu-item" data-name="Peanut Tea" data-price="150" data-image="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?w=600&q=80" data-ingredients="Peanut Butter, Tea, Milk, Honey"><span class="menu-item__name">Peanut Tea</span><span class="menu-item__price">150</span></div>
-                <div class="menu-item" data-name="Ice Tea" data-price="195" data-image="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?w=600&q=80" data-ingredients="Black Tea, Ice, Lemon, Mint"><span class="menu-item__name">Ice Tea</span><span class="menu-item__price">195</span></div>
-                <div class="menu-item" data-name="Coffee" data-price="120" data-image="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=600&q=80" data-ingredients="Freshly Brewed Ethiopian Coffee"><span class="menu-item__name">Coffee</span><span class="menu-item__price">120</span></div>
-                <div class="menu-item" data-name="Tea Coffee Spriss" data-price="120" data-image="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=600&q=80" data-ingredients="Coffee with Tea Extract"><span class="menu-item__name">Tea Coffee Spriss</span><span class="menu-item__price">120</span></div>
-                <div class="menu-item" data-name="Espresso" data-price="120" data-image="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&q=80" data-ingredients="Single Shot Espresso"><span class="menu-item__name">Espresso</span><span class="menu-item__price">120</span></div>
-                <div class="menu-item" data-name="Americano" data-price="120" data-image="https://images.unsplash.com/photo-1551030173-122aabc4489c?w=600&q=80" data-ingredients="Espresso with Hot Water"><span class="menu-item__name">Americano</span><span class="menu-item__price">120</span></div>
-                <div class="menu-item" data-name="Milk" data-price="150" data-image="https://images.unsplash.com/photo-1488477181946-6428a0293df2?w=600&q=80" data-ingredients="Warm Steamed Milk"><span class="menu-item__name">Milk <span class="veg-badge">V</span></span><span class="menu-item__price">150</span></div>
-                <div class="menu-item" data-name="Cafe Latte" data-price="200" data-image="https://images.unsplash.com/photo-1561048783-2c6d7a9ad3c0?w=600&q=80" data-ingredients="Espresso, Steamed Milk, Microfoam"><span class="menu-item__name">Cafe Latte</span><span class="menu-item__price">200</span></div>
-                <div class="menu-item" data-name="Tea Latte" data-price="200" data-image="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?w=600&q=80" data-ingredients="Tea, Steamed Milk, Foam"><span class="menu-item__name">Tea Latte</span><span class="menu-item__price">200</span></div>
+                <div class="menu-item" data-name="Lemon Tea" data-price="100" data-image="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?w=600&q=80" data-ingredients="Black Tea, Lemon, Honey"><span class="menu-item__name">Lemon Tea</span><span class="menu-item__price">100</span></div>
+                <div class="menu-item" data-name="Ginger Tea" data-price="100" data-image="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?w=600&q=80" data-ingredients="Black Tea, Ginger, Honey"><span class="menu-item__name">Ginger Tea</span><span class="menu-item__price">100</span></div>
+                <div class="menu-item" data-name="Flavor Tea" data-price="100" data-image="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?w=600&q=80" data-ingredients="Flavored Tea"><span class="menu-item__name">Flavor Tea</span><span class="menu-item__price">100</span></div>
+                <div class="menu-item" data-name="ORI Special Tea" data-price="200" data-image="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?w=600&q=80" data-ingredients="Special Tea Blend"><span class="menu-item__name">ORI Special Tea</span><span class="menu-item__price">200</span></div>
+                <div class="menu-item" data-name="Peanut Tea" data-price="150" data-image="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?w=600&q=80" data-ingredients="Peanut, Tea, Milk"><span class="menu-item__name">Peanut Tea</span><span class="menu-item__price">150</span></div>
+                <div class="menu-item" data-name="Ice Tea" data-price="195" data-image="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?w=600&q=80" data-ingredients="Iced Black Tea"><span class="menu-item__name">Ice Tea</span><span class="menu-item__price">195</span></div>
+                <div class="menu-item" data-name="Coffee" data-price="120" data-image="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=600&q=80" data-ingredients="Fresh Brewed Coffee"><span class="menu-item__name">Coffee</span><span class="menu-item__price">120</span></div>
+                <div class="menu-item" data-name="Tea Coffee Spriss" data-price="120" data-image="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=600&q=80" data-ingredients="Tea Coffee Blend"><span class="menu-item__name">Tea Coffee Spriss</span><span class="menu-item__price">120</span></div>
+                <div class="menu-item" data-name="Espresso" data-price="120" data-image="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&q=80" data-ingredients="Espresso Shot"><span class="menu-item__name">Espresso</span><span class="menu-item__price">120</span></div>
+                <div class="menu-item" data-name="Americano" data-price="120" data-image="https://images.unsplash.com/photo-1551030173-122aabc4489c?w=600&q=80" data-ingredients="Espresso + Hot Water"><span class="menu-item__name">Americano</span><span class="menu-item__price">120</span></div>
+                <div class="menu-item" data-name="Milk" data-price="150" data-image="https://images.unsplash.com/photo-1488477181946-6428a0293df2?w=600&q=80" data-ingredients="Steamed Milk"><span class="menu-item__name">Milk</span><span class="menu-item__price">150</span></div>
+                <div class="menu-item" data-name="Cafe Latte" data-price="200" data-image="https://images.unsplash.com/photo-1561048783-2c6d7a9ad3c0?w=600&q=80" data-ingredients="Espresso + Steamed Milk"><span class="menu-item__name">Cafe Latte</span><span class="menu-item__price">200</span></div>
+                <div class="menu-item" data-name="Coffee Latte" data-price="200" data-image="https://images.unsplash.com/photo-1561048783-2c6d7a9ad3c0?w=600&q=80" data-ingredients="Coffee + Steamed Milk"><span class="menu-item__name">Coffee Latte</span><span class="menu-item__price">200</span></div>
+                <div class="menu-item" data-name="Tea Latte" data-price="200" data-image="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?w=600&q=80" data-ingredients="Tea + Steamed Milk"><span class="menu-item__name">Tea Latte</span><span class="menu-item__price">200</span></div>
             </div>
         </div>
     </section>
 
     <!-- ============ SPECIALTY DRINKS ============ -->
-    <section class="section section--dark">
+    <section class="section">
         <div class="container">
-            <div class="category-banner" style="background-image: url('https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=1200&q=80');">
-                <h3 class="category-banner__title">✨ Specialty Drinks</h3>
+            <div class="section__header">
+                <div class="section__icon">✨</div>
+                <h2 class="section__title">Specialty <span>Drinks</span></h2>
+                <div class="section__line"></div>
             </div>
             <div class="menu-grid">
-                <div class="menu-item" data-name="Macchiato" data-price="150" data-image="https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=600&q=80" data-ingredients="Espresso, Dollop of Foamed Milk"><span class="menu-item__name">Macchiato</span><span class="menu-item__price">150</span></div>
-                <div class="menu-item" data-name="Hot Chocolate" data-price="245" data-image="https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?w=600&q=80" data-ingredients="Cocoa, Milk, Whipped Cream"><span class="menu-item__name">Hot Chocolate <span class="veg-badge">V</span></span><span class="menu-item__price">245</span></div>
-                <div class="menu-item" data-name="Caramel Latte" data-price="240" data-image="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=80" data-ingredients="Espresso, Caramel Syrup, Steamed Milk"><span class="menu-item__name">Caramel Latte</span><span class="menu-item__price">240</span></div>
-                <div class="menu-item" data-name="Caramel Macchiato" data-price="240" data-image="https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=600&q=80" data-ingredients="Vanilla, Caramel, Espresso, Milk"><span class="menu-item__name">Caramel Macchiato</span><span class="menu-item__price">240</span></div>
-                <div class="menu-item" data-name="Mocha Coffee" data-price="240" data-image="https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=600&q=80" data-ingredients="Chocolate, Espresso, Steamed Milk"><span class="menu-item__name">Mocha Coffee</span><span class="menu-item__price">240</span></div>
-                <div class="menu-item" data-name="Mocha Tea" data-price="240" data-image="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?w=600&q=80" data-ingredients="Chocolate, Tea, Steamed Milk"><span class="menu-item__name">Mocha Tea</span><span class="menu-item__price">240</span></div>
-                <div class="menu-item" data-name="Mocha Frappe" data-price="240" data-image="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=80" data-ingredients="Blended Coffee, Chocolate, Ice"><span class="menu-item__name">Mocha Frappe</span><span class="menu-item__price">240</span></div>
-                <div class="menu-item" data-name="Caramel Frappe" data-price="240" data-image="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=80" data-ingredients="Blended Coffee, Caramel, Ice"><span class="menu-item__name">Caramel Frappe</span><span class="menu-item__price">240</span></div>
-                <div class="menu-item" data-name="Fasting Macchiato" data-price="245" data-image="https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=600&q=80" data-ingredients="Black Coffee, Foamed Soy Milk"><span class="menu-item__name">Fasting Macchiato <span class="veg-badge">V</span></span><span class="menu-item__price">245</span></div>
-                <div class="menu-item" data-name="Bottle Water" data-price="60" data-image="https://images.unsplash.com/photo-1616118132534-381f8985f5c3?w=600&q=80" data-ingredients="Natural Spring Water"><span class="menu-item__name">Bottle Water</span><span class="menu-item__price">60</span></div>
-                <div class="menu-item" data-name="Soft Drink Glass" data-price="80" data-image="https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?w=600&q=80" data-ingredients="Coca-Cola, Sprite, Fanta, Mirinda"><span class="menu-item__name">Soft Drink Glass</span><span class="menu-item__price">80</span></div>
-                <div class="menu-item" data-name="Ambo Water" data-price="80" data-image="https://images.unsplash.com/photo-1616118132534-381f8985f5c3?w=600&q=80" data-ingredients="Mineral Water"><span class="menu-item__name">Ambo Water</span><span class="menu-item__price">80</span></div>
+                <div class="menu-item" data-name="Macchiato" data-price="150" data-image="https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=600&q=80" data-ingredients="Espresso + Foamed Milk"><span class="menu-item__name">Macchiato</span><span class="menu-item__price">150</span></div>
+                <div class="menu-item" data-name="Hot Chocolate" data-price="245" data-image="https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?w=600&q=80" data-ingredients="Hot Cocoa Drink"><span class="menu-item__name">Hot Chocolate</span><span class="menu-item__price">245</span></div>
+                <div class="menu-item" data-name="Caramel Latte" data-price="240" data-image="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=80" data-ingredients="Caramel + Espresso + Milk"><span class="menu-item__name">Caramel Latte</span><span class="menu-item__price">240</span></div>
+                <div class="menu-item" data-name="Caramel Macchiato" data-price="240" data-image="https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=600&q=80" data-ingredients="Caramel + Vanilla + Espresso"><span class="menu-item__name">Caramel Macchiato</span><span class="menu-item__price">240</span></div>
+                <div class="menu-item" data-name="Mocha Coffee" data-price="240" data-image="https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=600&q=80" data-ingredients="Chocolate + Coffee"><span class="menu-item__name">Mocha Coffee</span><span class="menu-item__price">240</span></div>
+                <div class="menu-item" data-name="Mocha Tea" data-price="240" data-image="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?w=600&q=80" data-ingredients="Chocolate + Tea"><span class="menu-item__name">Mocha Tea</span><span class="menu-item__price">240</span></div>
+                <div class="menu-item" data-name="Mocha Frappe" data-price="240" data-image="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=80" data-ingredients="Blended Mocha"><span class="menu-item__name">Mocha Frappe</span><span class="menu-item__price">240</span></div>
+                <div class="menu-item" data-name="Caramel Frappe" data-price="240" data-image="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=80" data-ingredients="Blended Caramel Coffee"><span class="menu-item__name">Caramel Frappe</span><span class="menu-item__price">240</span></div>
+                <div class="menu-item" data-name="Fasting Macchiato" data-price="245" data-image="https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=600&q=80" data-ingredients="Vegan Macchiato"><span class="menu-item__name">Fasting Macchiato</span><span class="menu-item__price">245</span></div>
+                <div class="menu-item" data-name="Bottle Water" data-price="60" data-image="https://images.unsplash.com/photo-1616118132534-381f8985f5c3?w=600&q=80" data-ingredients="Spring Water"><span class="menu-item__name">Bottle Water</span><span class="menu-item__price">60</span></div>
+                <div class="menu-item" data-name="Soft Drink Glass" data-price="80" data-image="#" data-ingredients="Soda"><span class="menu-item__name">Soft Drink Glass</span><span class="menu-item__price">80</span></div>
+                <div class="menu-item" data-name="Ambo Water" data-price="80" data-image="#" data-ingredients="Mineral Water"><span class="menu-item__name">Ambo Water</span><span class="menu-item__price">80</span></div>
             </div>
         </div>
     </section>
 
-    <!-- ============ EXTRAS & PACKAGING ============ -->
+    <!-- ============ JUICE ============ -->
     <section class="section section--light">
         <div class="container">
-            <div class="category-banner" style="background-image: url('https://images.unsplash.com/photo-1585109649139-366815a0d713?w=1200&q=80');">
-                <h3 class="category-banner__title">🍽️ Extras & Packaging</h3>
+            <div class="section__header">
+                <div class="section__icon">🧃</div>
+                <h2 class="section__title"><span>Juice</span></h2>
+                <div class="section__line"></div>
             </div>
             <div class="menu-grid">
-                <div class="menu-item" data-name="Milk" data-price="50" data-image="https://images.unsplash.com/photo-1488477181946-6428a0293df2?w=600&q=80" data-ingredients="Fresh Milk"><span class="menu-item__name">Milk <span class="veg-badge">V</span></span><span class="menu-item__price">50</span></div>
-                <div class="menu-item" data-name="Temir" data-price="20" data-image="https://images.unsplash.com/photo-1488477181946-6428a0293df2?w=600&q=80" data-ingredients="Temir"><span class="menu-item__name">Temir</span><span class="menu-item__price">20</span></div>
-                <div class="menu-item" data-name="Yogurt" data-price="50" data-image="https://images.unsplash.com/photo-1488477181946-6428a0293df2?w=600&q=80" data-ingredients="Plain Yogurt"><span class="menu-item__name">Yogurt <span class="veg-badge">V</span></span><span class="menu-item__price">50</span></div>
-                <div class="menu-item" data-name="Egg" data-price="80" data-image="https://images.unsplash.com/photo-1510693206979-df09806cb5f5?w=600&q=80" data-ingredients="Fresh Egg"><span class="menu-item__name">Egg</span><span class="menu-item__price">80</span></div>
-                <div class="menu-item" data-name="Bread" data-price="40" data-image="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80" data-ingredients="Fresh Bread"><span class="menu-item__name">Bread <span class="veg-badge">V</span></span><span class="menu-item__price">40</span></div>
-                <div class="menu-item" data-name="Takeaway Box" data-price="40" data-image="https://images.unsplash.com/photo-1574691250078-96e29b1f4f8e?w=600&q=80" data-ingredients="Eco-friendly Container"><span class="menu-item__name">Takeaway Box</span><span class="menu-item__price">40</span></div>
-                <div class="menu-item" data-name="Takeaway Juice Cup" data-price="20" data-image="https://images.unsplash.com/photo-1574691250078-96e29b1f4f8e?w=600&q=80" data-ingredients="Plastic Cup with Lid"><span class="menu-item__name">Takeaway Juice Cup</span><span class="menu-item__price">20</span></div>
-                <div class="menu-item" data-name="Takeaway Coffee Cup" data-price="30" data-image="https://images.unsplash.com/photo-1574691250078-96e29b1f4f8e?w=600&q=80" data-ingredients="Paper Coffee Cup with Lid"><span class="menu-item__name">Takeaway Coffee Cup</span><span class="menu-item__price">30</span></div>
-                <div class="menu-item" data-name="Mayonnaise" data-price="30" data-image="https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?w=600&q=80" data-ingredients="Creamy Mayonnaise"><span class="menu-item__name">Mayonnaise</span><span class="menu-item__price">30</span></div>
-                <div class="menu-item" data-name="Extra Honey" data-price="30" data-image="https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=600&q=80" data-ingredients="Pure Honey"><span class="menu-item__name">Extra Honey <span class="veg-badge">V</span></span><span class="menu-item__price">30</span></div>
+                <div class="menu-item" data-name="Avocado Juice" data-price="--" data-image="https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=600&q=80" data-ingredients="Fresh Avocado"><span class="menu-item__name">Avocado Juice</span><span class="menu-item__price">--</span></div>
+                <div class="menu-item" data-name="Mango Juice" data-price="--" data-image="https://images.unsplash.com/photo-1623065422902-30a2d299e4cd?w=600&q=80" data-ingredients="Fresh Mango"><span class="menu-item__name">Mango Juice</span><span class="menu-item__price">--</span></div>
+                <div class="menu-item" data-name="Papaya Juice" data-price="--" data-image="https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=600&q=80" data-ingredients="Fresh Papaya"><span class="menu-item__name">Papaya Juice</span><span class="menu-item__price">--</span></div>
+                <div class="menu-item" data-name="Pineapple Juice" data-price="--" data-image="https://images.unsplash.com/photo-1623065422902-30a2d299e4cd?w=600&q=80" data-ingredients="Fresh Pineapple"><span class="menu-item__name">Pineapple Juice</span><span class="menu-item__price">--</span></div>
+                <div class="menu-item" data-name="Mixed Juice" data-price="--" data-image="https://images.unsplash.com/photo-1623065422902-30a2d299e4cd?w=600&q=80" data-ingredients="Mixed Fruits"><span class="menu-item__name">Mixed Juice</span><span class="menu-item__price">--</span></div>
+                <div class="menu-item" data-name="ORI Special Juice" data-price="--" data-image="https://images.unsplash.com/photo-1623065422902-30a2d299e4cd?w=600&q=80" data-ingredients="Special Blend"><span class="menu-item__name">ORI Special Juice</span><span class="menu-item__price">--</span></div>
+                <div class="menu-item" data-name="Smoothie with Chocolate" data-price="--" data-image="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=600&q=80" data-ingredients="Chocolate Smoothie"><span class="menu-item__name">Smoothie with Chocolate</span><span class="menu-item__price">--</span></div>
+                <div class="menu-item" data-name="Milk Shake" data-price="--" data-image="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=600&q=80" data-ingredients="Milkshake"><span class="menu-item__name">Milk Shake</span><span class="menu-item__price">--</span></div>
+                <div class="menu-item" data-name="Melon Juice" data-price="--" data-image="https://images.unsplash.com/photo-1623065422902-30a2d299e4cd?w=600&q=80" data-ingredients="Fresh Melon"><span class="menu-item__name">Melon Juice</span><span class="menu-item__price">--</span></div>
+                <div class="menu-item" data-name="Orange Mix Juice" data-price="--" data-image="https://images.unsplash.com/photo-1623065422902-30a2d299e4cd?w=600&q=80" data-ingredients="Orange Blend"><span class="menu-item__name">Orange Mix Juice</span><span class="menu-item__price">--</span></div>
             </div>
         </div>
     </section>
 
-    <!-- ============ MODAL (POPUP) ============ -->
+    <!-- ============ MODAL ============ -->
     <div id="itemModal" class="modal">
         <div class="modal__content">
             <img id="modalImage" class="modal__image" src="" alt="">
@@ -696,14 +645,14 @@
     <!-- ============ CONTACT ============ -->
     <div class="contact-bar">
         <div class="container">
-            <h3 style="font-family:'Playfair Display',serif; font-size:1.6rem; margin-bottom:6px;">Order Now!</h3>
+            <h3 style="font-size:1.6rem; margin-bottom:6px;">Order Now!</h3>
             <div class="contact-bar__phone">📞 +251 974 73 88 88</div>
-            <p style="margin-top:6px; opacity:0.9;">Near British School | For comments and suggestions, contact us</p>
+            <p>Near British School | For comments and suggestions, contact us</p>
             <div class="contact-bar__social">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
     </div>
@@ -712,12 +661,7 @@
     <footer class="footer">
         <div class="container">
             <p>&copy; 2026 ORI Cafe — Taste The Excellence | Fresh & Delicious | Addis Ababa, Ethiopia</p>
-            <p class="footer__credit">
-                Designed & Developed by 
-                <a href="https://addispower.pages.dev" target="_blank" rel="noopener">
-                    <i class="fas fa-bolt"></i> AddisPower <i class="fas fa-bolt"></i>
-                </a>
-            </p>
+            <p class="footer__credit">THANK YOU FOR CHOOSING US.</p>
         </div>
     </footer>
 
